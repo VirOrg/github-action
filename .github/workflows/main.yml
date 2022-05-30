@@ -39,5 +39,5 @@ jobs:
           echo Python Version? 
           python --version
           echo
-          echo PIP Version
-          pip --version.
+          echo PIP Version?
+          pip
