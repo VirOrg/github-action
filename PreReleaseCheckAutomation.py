@@ -35,7 +35,7 @@ def inputVersions():
 
 
 def createDirectoryIfNotExisting():
-    parentDir = os.getcwd()+"/Documents"
+    parentDir = os.getcwd()
     dir = os.path.join(parentDir, rootPath)
     if not os.path.isdir(dir):
         os.mkdir(dir)
@@ -56,7 +56,7 @@ def createDirectoryIfNotExisting():
 
 
 def createInternalDirectoryIfNotExisting():
-    parentDir = os.getcwd()+"/Documents"
+    parentDir = os.getcwd()
     rootDir = os.path.join(parentDir, rootPath)
     if not os.path.isdir(os.path.join(rootDir,repoConfig)):
         os.mkdir(os.path.join(rootDir,repoConfig))
@@ -64,7 +64,7 @@ def createInternalDirectoryIfNotExisting():
         os.mkdir(os.path.join(rootDir,repoNation))
 
 def cloneRepo(repoConstant):
-    parentDir = os.getcwd()+"/Documents"
+    parentDir = os.getcwd()
     rootDir = os.path.join(parentDir, rootPath)
     if repoConstant is config:
         return accessRepoOrClone(os.path.join(rootDir,repoConfig),configRepoUrl)
@@ -81,7 +81,7 @@ def createBranch(repoConstant, repositoryObj):
 
 
 def createCopyAndReplaceConfigNationFNI():
-    parentDir = os.getcwd()+"/Documents"
+    parentDir = os.getcwd()
     rootDir = os.path.join(parentDir, rootPath)
     conifDir = os.path.join(rootDir,repoConfig)
     sourceDirNation = os.path.join(conifDir,"foxnation/android/"+oldVersion)
@@ -163,7 +163,7 @@ def createPullRequest(repoConstant):
         print(pr.patch_url)
 
 def bumpVersionNation(): 
-    parentDir = os.getcwd()+"/Documents"
+    parentDir = os.getcwd()
     rootDir = os.path.join(parentDir, rootPath)
     nationDir = os.path.join(rootDir,repoNation)
     gradlePropertyDir = os.path.join(nationDir,"DeltaApplication/DCGDelta")
