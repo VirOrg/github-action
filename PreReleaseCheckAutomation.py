@@ -30,8 +30,8 @@ fileTypes = [".json"]
 def inputVersions():
     global oldVersion
     global newVersion
-    oldVersion = input("Enter Current Version: ")
-    newVersion = input("Enter Next Version: ")
+    oldVersion = 3.52
+    newVersion = 3.52.5
 
 
 def createDirectoryIfNotExisting():
