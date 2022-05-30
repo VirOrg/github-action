@@ -16,7 +16,7 @@ from github import Github
 
 
 # constants start
-configRepoUrl = "https://github.com/foxcorp/cpe-client-config.git"
+configRepoUrl = "https://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@github.com/foxcorp/vinitsaxena/cpe-client-config.git"
 nationRepoUrl = "https://github.com/foxcorp/foxnation-android.git"
 rootPath = "auto-script"
 repoConfig = "config" 
