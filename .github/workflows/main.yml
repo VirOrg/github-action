@@ -40,4 +40,4 @@ jobs:
           python --version
           echo
           echo PIP Version
-          echo pip --version.
+          pip --version.
