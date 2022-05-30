@@ -1,3 +1,11 @@
+import subprocess
+import sys
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+install("GitPython")
+install("PyGithub")
+
 import git
 import os
 from git import InvalidGitRepositoryError, Repo
@@ -5,8 +13,7 @@ import pathlib
 import fileinput
 import shutil
 from github import Github
-import subprocess
-import sys
+
 
 # constants start
 configRepoUrl = "https://github.com/foxcorp/cpe-client-config.git"
@@ -166,11 +173,6 @@ def bumpVersionNation():
     file = open(filePath, "w")
     file.write(newText)
 
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-install("GitPython")
-install("PyGithub")
 inputVersions()
 createDirectoryIfNotExisting()
 repository = cloneRepo(config)
